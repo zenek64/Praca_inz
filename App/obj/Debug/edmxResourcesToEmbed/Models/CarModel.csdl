@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PracaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Marka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rok_Od" Type="Int32" Nullable="false" />
+    <Property Name="Rok_Do" Type="Int32" Nullable="false" />
+    <Property Name="Pojemnosc" Type="Int32" Nullable="false" />
+    <Property Name="Moc" Type="Int32" Nullable="false" />
+    <Property Name="Paliwo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Drzwi" Type="Int32" Nullable="false" />
+    <Property Name="Miejsca" Type="Int32" Nullable="false" />
+    <Property Name="Bagaznik" Type="Int32" Nullable="false" />
+    <Property Name="Nadwozie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Przyspieszenie" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Vmax" Type="Int32" Nullable="false" />
+    <Property Name="Skrzynia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Biegi" Type="Int32" Nullable="false" />
+    <Property Name="Naped" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Spalanie" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Cena" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PracaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Car" EntityType="Self.Car" />
+  </EntityContainer>
+</Schema>

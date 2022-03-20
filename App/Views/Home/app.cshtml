@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+@*@model App.Models.Pytania*@
+@model App.Models.Questions
+<section>
+    <div class="container">
+        <form action="/Home/app" method="post">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6 window mt-5">
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-12 col-xl-6">
+                            <label for="way_of_usage" class="question_title">Sposób użytkowania: </label>
+                            <br />
+                            <input type="radio" name="way_of_usage" id="way_of_usage" value="(Paliwo='Benzyna' OR Paliwo='Hybryda' OR Paliwo='Elektryczny')" /> Przeważnie miasto
+                            <br />
+                            <input type="radio" name="way_of_usage" id="way_of_usage" value="(Paliwo='Benzyna' OR Paliwo='Hybryda' OR Paliwo='Diesel' OR Paliwo='LPG')" /> Mieszany
+                            <br />
+                            <input type="radio" name="way_of_usage" id="way_of_usage" value="(Paliwo='Diesel' OR Paliwo='LPG')" /> Trasa
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <label for="purpose" class="question_title">Przeznaczenie: </label>
+                            <br />
+                            <input type="radio" name="purpose" id="purpose" value="AND (Drzwi <=3 AND Miejsca <=4 )" /> Dla singla lub pary
+                            <br />
+                            <input type="radio" name="purpose" id="purpose" value="AND (Drzwi >=4 AND Miejsca >4)" /> Uniwersalny
+                            <br />
+                            <input type="radio" name="purpose" id="purpose" value="AND Miejsca >=6" /> Dla dużej rodziny
+                            <br />
+                            <input type="radio" name="purpose" id="purpose" value="AND (Nadwozie='Minivan' OR Nadwozie='Pickup')" /> Użytkowy
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-12">
+                            <label for="feature" class="question_title">Najważniejsze cechy:</label>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <input type="checkbox" name="feature1" id="feature1" value="AND NCAP >=4" /> Bezpieczeństwo <a href="#" class="tooltip-test" title="Cztery lub więcej gwiazdek w testach NCAP"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature2" id="feature2" value="AND (Marka='Kia' OR Marka='Hyundai' OR Marka='Suzuki' OR Marka='Dacia' OR Marka='Mitsubishi'  OR Marka='Toyota' OR Marka='Renault' OR Marka='Nissan' OR Marka='Seat' OR Marka='Chevrolet' OR Marka='Alfa Romeo' OR Marka='Honda' OR Marka='Mazda' OR Marka='Land Rover' OR Marka='Skoda')" /> Koszty utrzymania <a href="#" class="tooltip-test" title="Długi okres gwarancji oraz niskie koszty ubezpieczenia"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature3" id="feature3" value="AND Segment='S'" /> Sportowe wrażenia <a href="#" class="tooltip-test" title="Sportowa charakterystyka"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature4" id="feature4" value="AND (Marka='Lexus' OR Marka='Mazda' OR Marka='Toyota' OR Marka='Infiniti' OR Marka='Honda' OR Marka='Subaru' OR Marka='Nissan' OR Marka='Hyundai')" /> Bezawaryjność <a href="#" class="tooltip-test" title="Wysoka pozycja w rankingach bezawaryjności"><i class="bi bi-question-octagon"></i></a>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                            <input type="checkbox" name="feature5" id="feature5" value="AND Bagaznik >=600" /> Praktyczność <a href="#" class="tooltip-test" title="Duża pojemność bagażnika"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature6" id="feature6" value="AND (Segment='E' OR Segment='F')" /> Reprezentacyjność <a href="#" class="tooltip-test" title="Duże, luksusowe samochody klasy premium"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature7" id="feature7" value="AND ((Nadwozie='SUV' OR Nadwozie='Pickup') AND Naped='4x4')" /> Właściwości terenowe <a href="#" class="tooltip-test" title="Napęd na cztery koła oraz duży prześwit"><i class="bi bi-question-octagon"></i></a>
+                            <br />
+                            <input type="checkbox" name="feature8" id="feature8" value="AND Spalanie <=7" /> Zużycie paliwa <a href="#" class="tooltip-test" title="Spalanie poniżej 7l/100km"><i class="bi bi-question-octagon"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-right mt-5">
+                <div class="col-12 col-lg-6">
+                    <input type="submit" value="Wyślij" class="next" />
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+

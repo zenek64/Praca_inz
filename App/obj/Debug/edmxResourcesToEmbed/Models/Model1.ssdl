@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Marka" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Rok_Od" Type="int" Nullable="false" />
+    <Property Name="Rok_Do" Type="int" Nullable="false" />
+    <Property Name="Pojemnosc" Type="int" Nullable="false" />
+    <Property Name="Moc" Type="int" Nullable="false" />
+    <Property Name="Paliwo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Drzwi" Type="int" Nullable="false" />
+    <Property Name="Miejsca" Type="int" Nullable="false" />
+    <Property Name="Bagaznik" Type="int" Nullable="false" />
+    <Property Name="Nadwozie" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Przyspieszenie" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Vmax" Type="int" Nullable="false" />
+    <Property Name="Skrzynia" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Biegi" Type="int" Nullable="false" />
+    <Property Name="Naped" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Spalanie" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Cena" Type="int" Nullable="false" />
+    <Property Name="Segment" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="NCAP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CarModelStoreContainer">
+    <EntitySet Name="Car" EntityType="Self.Car" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

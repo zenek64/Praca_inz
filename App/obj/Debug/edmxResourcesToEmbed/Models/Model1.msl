@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarModelStoreContainer" CdmEntityContainer="PracaEntities2">
+    <EntitySetMapping Name="Car">
+      <EntityTypeMapping TypeName="CarModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Marka" ColumnName="Marka" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Rok_Od" ColumnName="Rok_Od" />
+          <ScalarProperty Name="Rok_Do" ColumnName="Rok_Do" />
+          <ScalarProperty Name="Pojemnosc" ColumnName="Pojemnosc" />
+          <ScalarProperty Name="Moc" ColumnName="Moc" />
+          <ScalarProperty Name="Paliwo" ColumnName="Paliwo" />
+          <ScalarProperty Name="Drzwi" ColumnName="Drzwi" />
+          <ScalarProperty Name="Miejsca" ColumnName="Miejsca" />
+          <ScalarProperty Name="Bagaznik" ColumnName="Bagaznik" />
+          <ScalarProperty Name="Nadwozie" ColumnName="Nadwozie" />
+          <ScalarProperty Name="Przyspieszenie" ColumnName="Przyspieszenie" />
+          <ScalarProperty Name="Vmax" ColumnName="Vmax" />
+          <ScalarProperty Name="Skrzynia" ColumnName="Skrzynia" />
+          <ScalarProperty Name="Biegi" ColumnName="Biegi" />
+          <ScalarProperty Name="Naped" ColumnName="Naped" />
+          <ScalarProperty Name="Spalanie" ColumnName="Spalanie" />
+          <ScalarProperty Name="Cena" ColumnName="Cena" />
+          <ScalarProperty Name="Segment" ColumnName="Segment" />
+          <ScalarProperty Name="NCAP" ColumnName="NCAP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
